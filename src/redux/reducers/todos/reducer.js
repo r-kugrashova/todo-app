@@ -14,7 +14,7 @@ const initialState = [
     },
     {
         id: 3,
-        text: 'Todo 3',
+        text: 'AHAHAHA IM EVIL BRANCH!',
         done: true
     },
 ];
