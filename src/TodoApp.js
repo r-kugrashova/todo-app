@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux'
+import {bindActionCreators} from 'redux';
 
 import {changeTodo} from "./redux/reducers/todos/actions";
 import {changeFilter} from "./redux/reducers/filter/actions";
@@ -12,6 +12,7 @@ import HeaderToDo from './Components/HeaderToDo';
 import TodoList from './Components/TodoList';
 import VisibilityFilters from './Components/VisibilityFilters';
 
+
 class TodoApp extends Component {
 
   render() {
@@ -19,16 +20,25 @@ class TodoApp extends Component {
       return (
           <div>
               <HeaderToDo/>
-              <VisibilityFilters onChange={changeFilter} filters={filters}/>
-              <TodoList onChange={changeTodo} todos={todos} filters={filters}/>
-              <AddToDo createTodo={newTodo}/>
+              <VisibilityFilters
+                  onChange={changeFilter}
+                  filters={filters}
+              />
+              <TodoList
+                  onChange={changeTodo}
+                  todos={todos}
+                  filters={filters}
+              />
+              <AddToDo
+                  createTodo={newTodo}
+              />
           </div>
       )
   }
 }
 
 const mapStateToProps = (state) => ({
-   todos: state.todos,
+    todos: state.todos,
     filters: state.filters,
 });
 

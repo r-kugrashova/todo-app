@@ -17,13 +17,15 @@ const filters_start = [
     }
 ];
 
-export default function filters(state = filters_start, action){
-    switch(action.type){
-        case CHANGE_FILTER:{
-            return state.map( filter =>{
-                if (filter.id === action.data)
-                {filter.done = true}
-                else {filter.done = false}
+export default function filters(state = filters_start, action) {
+    switch (action.type) {
+        case CHANGE_FILTER: {
+            return state.map(filter => {
+                if (filter.id === action.data) {
+                    filter.done = true
+                } else {
+                    filter.done = false
+                }
                 return filter;
             })
         }

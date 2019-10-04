@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 
 class AddToDo extends Component {
 
-    constructor(){
-        super()
+    constructor(props){
+        super(props);
         this.state={
             text:"",
             id: "",
@@ -26,7 +26,6 @@ class AddToDo extends Component {
         return(
             <div>
                 <input type="text" onKeyDown={this.handleChange}/>
-                {/*<button onClick={this.onClick}>Add todo</button>*/}
             </div>
         )
     }
