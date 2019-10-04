@@ -1,24 +1,11 @@
 import {CHANGE_FILTER} from "./actionTypes";
 
-const initialFilterState = [
-    'All'
-];
+const activeFilter = 'All';
 
-
-
-export default function filters(state = initialFilterState, action) {
+export default function filters(state = activeFilter, action) {
     switch (action.type) {
         case CHANGE_FILTER: {
-            // console.log('ACTION DATA', action.data);
-            // return state.map(filter => {
-            //     if (filter.id === action.data) {
-            //         filter = true
-            //     } else {
-            //         filter.done = false
-            //     }
-            const filter = action.data;
-                return filter;
-            // })
+            return action.data;
         }
     }
     return state;

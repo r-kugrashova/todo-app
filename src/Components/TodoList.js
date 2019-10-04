@@ -15,20 +15,22 @@ class TodoList extends Component {
                     key={todo.id}
                 />;
             }
-            if ((filters === 'Completed') && todo.done) {
+            if ((filters=== 'Completed') && todo.done) {
                 return <Todo
                     onChange={onChange}
                     item={todo}
                     key={todo.id}
                 />;
             }
+
+            if ((filters=== 'Incompleted') && !todo.done) {
                 return <Todo
                     onChange={onChange}
                     item={todo}
                     key={todo.id}
                 />;
             }
-        );
+        });
     }
 }
 

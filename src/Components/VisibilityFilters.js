@@ -12,7 +12,7 @@ class VisibilityFilters extends React.Component {
                 <li style={{display:"inline", marginLeft:"20px"}}>
                     <label>
                         <input type="radio"
-                               checked={this.props.filters === 'All'}
+                               checked={(this.props.filters === 'All')}
                                onChange={this.onChange}
                                id='All'/>
                         All
