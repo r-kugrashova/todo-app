@@ -11,20 +11,31 @@ class VisibilityFilters extends React.Component {
             <ul style={{listStyleType:"none"}}>
                 <li style={{display:"inline", marginLeft:"20px"}}>
                     <label>
-                        <input type="radio" checked={this.props.filters[0].done} onChange={this.onChange} id={this.props.filters[0].id}/>
-                        {this.props.filters[0].id}
+                        <input type="radio"
+                               checked={this.props.filters === 'All'}
+                               onChange={this.onChange}
+                               id='All'/>
+                        All
                     </label>
                 </li>
                 <li style={{display:"inline", marginLeft:"20px"}}>
                     <label>
-                        <input type="radio" checked={this.props.filters[1].done} onChange={this.onChange} id={this.props.filters[1].id}/>
-                        {this.props.filters[1].id}
+                        <input
+                            type="radio"
+                            checked={this.props.filters === 'Completed'}
+                            onChange={this.onChange}
+                            id='Completed'/>
+                        Completed
                     </label>
                 </li>
                 <li style={{display:"inline", marginLeft:"20px"}}>
                     <label>
-                        <input type="radio" checked={this.props.filters[2].done} onChange={this.onChange} id={this.props.filters[2].id}/>
-                        {this.props.filters[2].id}
+                        <input
+                            type="radio"
+                            checked={this.props.filters === 'Incompleted'}
+                            onChange={this.onChange}
+                            id='Incompleted'/>
+                        Incompleted
                     </label>
                 </li>
             </ul>
